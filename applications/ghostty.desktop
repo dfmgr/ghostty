@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Ghostty
+Exec=/usr/local/bin/ghostty --config ~/.config/ghostty/config.toml
+Type=Application
+Terminal=false
+Categories=System;TerminalEmulator;
+Icon=utilities-terminal
+StartupWMClass=ghostty

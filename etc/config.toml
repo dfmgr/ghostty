@@ -1,0 +1,57 @@
+# ~/.config/ghostty/config.toml
+
+# 🧠 Default command
+command = "gtmux"
+
+# 🔠 Font configuration
+[font]
+family = "Hack Nerd Font"
+size = 12.0
+fallback = ["Source Code Pro", "Monospace", "DejaVu Sans Mono"]
+
+# 🎨 Dracula-inspired color scheme
+[colors]
+foreground = "#F8F8F2"
+background = "#282A36"
+cursor = "#F8F8F2"
+selection-background = "#44475A"
+selection-foreground = "#F8F8F2"
+
+ansi = [
+  "#000000", "#FF5555", "#50FA7B", "#F1FA8C",
+  "#BD93F9", "#FF79C6", "#8BE9FD", "#BFBFBF"
+]
+
+brights = [
+  "#4D4D4D", "#FF6E6E", "#69FF94", "#FFFFA5",
+  "#D6ACFF", "#FF92DF", "#A4FFFF", "#FFFFFF"
+]
+
+# 🔍 Scrollback
+scrollback-lines = 5000
+
+# 🧭 Keybindings
+[keyboard.bindings]
+"Ctrl+=" = "IncreaseFontSize"
+"Ctrl++" = "IncreaseFontSize"
+"Ctrl+-" = "DecreaseFontSize"
+"Ctrl+_" = "DecreaseFontSize"
+"Ctrl+0" = "ResetFontSize"
+
+# 🖱️ Mouse behavior
+[mouse]
+hide-when-typing = true
+
+# 🧿 Cursor
+[cursor]
+shape = "block"
+blink = true
+
+# 🔔 Bell
+[bell]
+audible = true
+visual = true
+
+# 📋 Clipboard
+[clipboard]
+copy-on-select = true

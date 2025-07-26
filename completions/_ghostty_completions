@@ -1,0 +1,21 @@
+_ghostty_complete() {
+  local cur prev opts
+  COMPREPLY=()
+  cur="${COMP_WORDS[COMP_CWORD]}"
+  prev="${COMP_WORDS[COMP_CWORD-1]}"
+  opts="--title --config --working-directory --help --version"
+
+  case "$prev" in
+    --working-directory)
+      COMPREPLY=( $(compgen -d -- "$cur") )
+      return 0
+      ;;
+    --config)
+      COMPREPLY=( $(compgen -f -X '!*.toml' -- "$cur") )
+      return 0
+      ;;
+  esac
+
+  COMPREPLY=( $(compgen -W "$opts" -- "$cur") )
+}
+complete -F _ghostty_complete ghostty
